@@ -1,3 +1,17 @@
 body {
 	background: yellow;
 }
+
+.header {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: aqua;
+
+}
+
+.body {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.code {
+	font-family: "Courier New", Courier, monospace;
+}

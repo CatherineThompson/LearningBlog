@@ -8191,25 +8191,104 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	__webpack_require__(1);
-
 	__webpack_require__(469);
+
+	var _practice = __webpack_require__(473);
+
+	var _practice2 = _interopRequireDefault(_practice);
+
+	var _Button = __webpack_require__(474);
+
+	var _Button2 = _interopRequireDefault(_Button);
+
+	var _JournalEntries = __webpack_require__(475);
+
+	var _JournalEntries2 = _interopRequireDefault(_JournalEntries);
+
+	var _Header = __webpack_require__(476);
+
+	var _Header2 = _interopRequireDefault(_Header);
+
+	var _Code = __webpack_require__(479);
+
+	var _Code2 = _interopRequireDefault(_Code);
+
+	var _Body = __webpack_require__(478);
+
+	var _Body2 = _interopRequireDefault(_Body);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var MyComponentClass = _react2.default.createClass({
-	  displayName: 'MyComponentClass',
+	//Colors to change div color
+	var green = '#39D1B4';
+	var yellow = '#FFD712';
 
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'h1',
-	      null,
-	      'Hello World'
-	    );
-	  }
+	var MyComponentClass = _react2.default.createClass({
+	    displayName: 'MyComponentClass',
+
+	    getInitialState: function getInitialState() {
+	        return { color: green };
+	    },
+
+	    handleClick: function handleClick() {
+	        var changeColor = this.state.color == 'green' ? 'yellow' : 'green';
+	        this.setState({ color: changeColor });
+	    },
+
+	    render: function render() {
+	        if (this.props.greet == 1) {
+	            return _react2.default.createElement(
+	                'div',
+	                { style: { background: this.state.color } },
+	                _react2.default.createElement(
+	                    _Button2.default,
+	                    { onClick: this.handleClick },
+	                    'Button Version 1'
+	                ),
+	                _react2.default.createElement(_practice2.default, { words: 'greet type 1' })
+	            );
+	        } else if (this.props.greet == 2) {
+	            return _react2.default.createElement(
+	                'div',
+	                { style: { background: this.state.color } },
+	                _react2.default.createElement(
+	                    _Button2.default,
+	                    { onClick: this.handleClick },
+	                    'Button Version 1'
+	                ),
+	                _react2.default.createElement(_practice2.default, { words: 'greet type 2' })
+	            );
+	        } else {
+	            return _react2.default.createElement(
+	                'div',
+	                { style: { background: this.state.color } },
+	                _react2.default.createElement(
+	                    _Button2.default,
+	                    { onClick: this.handleClick },
+	                    'Button Version 1'
+	                ),
+	                _react2.default.createElement(_practice2.default, { words: 'no greet type' })
+	            );
+	        }
+	    }
+	});
+	var PleaseWork = _react2.default.createClass({
+	    displayName: 'PleaseWork',
+
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	                _Header2.default,
+	                null,
+	                'stuff'
+	            )
+	        );
+	    }
 	});
 
-	_reactDom2.default.render(_react2.default.createElement(MyComponentClass, null), document.getElementById('app2'));
+	_reactDom2.default.render(_react2.default.createElement(_JournalEntries2.default, null), document.getElementById('app2'));
 
 /***/ },
 /* 299 */
@@ -29426,7 +29505,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n\tbackground: yellow;\n}\n", ""]);
+	exports.push([module.id, "body {\n\tbackground: yellow;\n}\n\n.header {\n\tfont-family: \"Trebuchet MS\", Helvetica, sans-serif;\n    color: aqua;\n\n}\n\n.body {\n\tfont-family: \"Trebuchet MS\", Helvetica, sans-serif;\n}\n\n.code {\n\tfont-family: \"Courier New\", Courier, monospace;\n}", ""]);
 
 	// exports
 
@@ -29738,6 +29817,225 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
+
+/***/ },
+/* 473 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(299);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//const HeyThere = React.createClass(
+	//	{
+	//        render: function () {
+	//          return  (<p>Heyyyyy!</p>);        
+	//        }
+	//    }
+	//);
+	//
+	//export default HeyThere;
+
+	var HeyThere = function (_Component) {
+	    _inherits(HeyThere, _Component);
+
+	    function HeyThere() {
+	        _classCallCheck(this, HeyThere);
+
+	        return _possibleConstructorReturn(this, (HeyThere.__proto__ || Object.getPrototypeOf(HeyThere)).apply(this, arguments));
+	    }
+
+	    _createClass(HeyThere, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'p',
+	                null,
+	                this.props.words
+	            );
+	        }
+	    }]);
+
+	    return HeyThere;
+	}(_react.Component);
+
+	HeyThere.propTypes = {
+	    words: _react.PropTypes.string.isRequired
+	};
+	exports.default = HeyThere;
+
+/***/ },
+/* 474 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(299);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Button = _react2.default.createClass({
+	    displayName: 'Button',
+
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'button',
+	            { onClick: this.props.onClick },
+	            this.props.children
+	        );
+	    }
+	});
+
+	module.exports = Button;
+
+/***/ },
+/* 475 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(299);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Header = __webpack_require__(476);
+
+	var _Header2 = _interopRequireDefault(_Header);
+
+	var _Body = __webpack_require__(478);
+
+	var _Body2 = _interopRequireDefault(_Body);
+
+	var _Code = __webpack_require__(479);
+
+	var _Code2 = _interopRequireDefault(_Code);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Entry1 = _react2.default.createClass({
+	    displayName: 'Entry1',
+
+
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	                _Header2.default,
+	                null,
+	                'Sept 14, 2016'
+	            ),
+	            _react2.default.createElement(
+	                _Body2.default,
+	                null,
+	                _react2.default.createElement(
+	                    _Code2.default,
+	                    null,
+	                    'this is code'
+	                )
+	            )
+	        );
+	    }
+	});
+
+	module.exports = Entry1;
+
+/***/ },
+/* 476 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var _react = __webpack_require__(299);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Header = _react2.default.createClass({
+	    displayName: "Header",
+
+	    render: function render() {
+	        return _react2.default.createElement(
+	            "h1",
+	            { "class": "header" },
+	            this.props.children
+	        );
+	    }
+	});
+
+	module.exports = Header;
+
+/***/ },
+/* 477 */,
+/* 478 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var _react = __webpack_require__(299);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Body = _react2.default.createClass({
+	    displayName: "Body",
+
+	    render: function render() {
+	        return _react2.default.createElement(
+	            "div",
+	            { "class": "body" },
+	            this.props.children
+	        );
+	    }
+	});
+
+	module.exports = Body;
+
+/***/ },
+/* 479 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var _react = __webpack_require__(299);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Code = _react2.default.createClass({
+	    displayName: "Code",
+
+	    render: function render() {
+	        return _react2.default.createElement(
+	            "code",
+	            { "class": "code" },
+	            this.props.children
+	        );
+	    }
+	});
+
+	module.exports = Code;
 
 /***/ }
 /******/ ]);

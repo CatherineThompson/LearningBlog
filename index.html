@@ -8,49 +8,6 @@
     <body>
 
         <h1>Cathy's Learning Blog</h1>
-        <div>
-            <h2>Sept 14, 2016</h2>
-            <h2>ReactJS:</h2>
-            <p></p>
-            <pre>
-                I learned how to create a <em>React Component</em> by creating a <em>Component Class</em> in JS. 
-                
-                Create a variable:	var MyComponentClass 	//must be UpperCamelCase
-                Set var equal to a Class:	React.createClass()	//calls on React library method
-                Place instructions Object in createClass method:	{ render:	function() }	//must contain a render function
-                Function must return a JSX element:		function() { return	(JSX element);}		
-
-                Render Component:   <code>ReactDOM.render( <MyComponentClass />, document.getElementById(‘app’));</code>	
-                //appends the return element in the render function into the element with the id=app in the html file
-
-                Example:
-
-                //imports react libraries
-                <code>
-                var React = require('react');
-                var ReactDOM = require('react-dom');
-                </code>
-
-                //creates a Component Class
-                <code>
-                var MyComponentClass = React.createClass(
-                    //Object
-                    {
-                            render: function() {
-                                return  (<h1>Hello World</h1>);   }         
-                        }
-                );
-                </code>
-
-                //Renders a Component
-                <code>
-                ReactDOM.render(
-                    <MyComponentClass />,
-                  document.getElementById('app')
-                );
-                </code>
-            </pre>
-        </div>
         <div id="app2"></div>
     
     </body>
