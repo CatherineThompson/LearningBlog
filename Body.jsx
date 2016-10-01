@@ -1,13 +1,18 @@
 import React from 'react';
+import './style.css';
 
-var Body = React.createClass(
+export default React.createClass(
     {
         render: function() {
             return(
-                <div class="body">{this.props.children}</div>
+                <div className="body">
+                    {this.props.children}
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </div>
             );
         }
     }
 );
-
-module.exports = Body;

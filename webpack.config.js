@@ -10,10 +10,14 @@ module.exports = {
         loaders: [
             { test: /\.css$/, loader: "style!css" },
             {
-               test: /\.jsx$/,
-               exclude: /node_modules/,
-               loader: 'babel-loader'
-             }
+                test: /\.jsx$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader'
+            },
+            {
+                test: /\.jpe?g$/,
+                loader: 'url?mimetype=image/jpeg'
+            }
         ],
     },
 };

@@ -1,13 +1,12 @@
 import React from 'react';
+import './style.css';
 
-var Header = React.createClass(
+export default React.createClass(
     {
         render: function() {
             return (
-                <h1 class="header">{this.props.children}</h1>
+                <h1 className="header">{this.props.children}</h1>
             );
         }
     }
 );
-
-module.exports = Header;

@@ -15,6 +15,7 @@ class HeyThere extends Component {
     static propTypes = {
         words: PropTypes.string.isRequired
     };
+
     
     render () {
         return <p>{this.props.words}</p>

@@ -1,13 +1,12 @@
 import React from 'react';
+import './style.css';
 
-var Code = React.createClass(
+export default React.createClass(
     {
         render: function () {
             return(
-                <code class="code">{this.props.children}</code>
+                <code className="code">{this.props.children}</code>
             );
         }
     }
 );
-
-module.exports = Code;

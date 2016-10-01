@@ -1,17 +1,53 @@
-body {
-	background: yellow;
+.Pale_Gold {
+	color: #c0b283;
 }
 
-.header {
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-    color: aqua;
+.Silk {
+	color: #dcd0c0;
+}
 
+.Paper {
+	color: #f4f4f4;
+}
+
+.Charcoal {
+	color: #373737;
+}
+
+body {
+	background: url("background2.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+    padding: 120px;
+}
+
+.mainHeader {
+	color: #c0b283;
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+    font-size: 150px;
+    padding-bottom: 150px;
+    padding-top: 50px;
 }
 
 .body {
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-family: Century Gothic, sans-serif;
+    color: #373737;
+    max-width: 800px;
+    min-width: 400px;
+}
+
+.header {
+    font-family: Century Gothic, sans-serif;
+	color: #373737;
 }
 
 .code {
-	font-family: "Courier New", Courier, monospace;
+    font-size: 15px;
+    color: #373737;
+    border-radius: 5px;
+    padding: 5px;
+    background: lightgray;
+    line-height: 150%;
 }
